@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pintores Pro España | Expertos en Alta Decoración</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --azul-corporativo: #0d47a1;
+            --azul-claro: #f0f7ff;
+            --whatsapp: #25d366;
+            --texto-oscuro: #1a1a1a;
+        }
+
+        body { font-family: 'Open Sans', sans-serif; color: var(--texto-oscuro); overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            background: linear-gradient(rgba(13, 71, 161, 0.7), rgba(13, 71, 161, 0.7)), 
+                        url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=2070') center/cover;
+            display: flex;
+            align-items: center;
+            color: white;
+            clip-path: ellipse(150% 100% at 50% 0%);
+        }
+
+        .hero h1 { font-size: 4rem; line-height: 1; margin-bottom: 1.5rem; }
+        .hero .highlight { color: #4db8ff; }
+
+        /* GALERÍA DE PROYECTOS */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            height: 300px;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.1); }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, var(--azul-corporativo));
+            height: 50%;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+        /* MARCAS PINTURA */
+        .brand-slot {
+            padding: 30px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 120px;
+            font-weight: bold;
+            color: #ddd;
+            transition: 0.3s;
+        }
+        .brand-slot:hover { border-color: var(--azul-corporativo); color: var(--azul-corporativo); }
+
+        /* BOTONES Y WHATSAPP */
+        .btn-cta {
+            padding: 18px 40px;
+            font-weight: 700;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background-color: var(--whatsapp);
+            color: white;
+            border: none;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+        }
+        .btn-cta:hover { transform: translateY(-3px); color: white; filter: brightness(1.1); }
+
+        .float-wp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: var(--whatsapp);
+            color: white;
+            width: 65px; height: 65px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 35px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero text-center text-lg-start">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h6 class="text-uppercase fw-bold mb-3 tracking-widest" style="letter-spacing: 3px;">Pintores Profesionales en España</h6>
+                    <h1>Damos color a tus <span class="highlight">sueños</span> con acabados de lujo.</h1>
+                    <p class="lead mb-5">Especialistas en alisado de paredes, eliminación de gotelé y alta decoración. Limpieza impecable, rapidez y los mejores materiales del mercado.</p>
+                    <a href="https://wa.me/34600000000" class="btn btn-cta btn-lg">
+                        <i class="fab fa-whatsapp me-2"></i> Pide Presupuesto Gratis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="nosotros" class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1595844730298-b960ff98fee0?auto=format&fit=crop&q=80&w=1000" class="img-fluid rounded-4 shadow" alt="Pintor profesional">
+                </div>
+                <div class="col-lg-6 ps-lg-5 mt-5 mt-lg-0">
+                    <h2 class="display-5 mb-4">Más que pintura, es <br><span class="text-primary">renovación total</span>.</h2>
+                    <p>Con sede en España, llevamos más de 15 años transformando hogares, locales comerciales y comunidades de vecinos. Nuestro compromiso es sencillo: <strong>si no queda perfecto, no hemos terminado.</strong></p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Protección total de muebles y suelos.</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Pintura ecológica sin olores.</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Cumplimiento estricto de plazos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6">Nuestro Porfolio</h2>
+                <p class="text-muted">Proyectos recientes realizados en toda la península.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Salón moderno">
+                        <div class="gallery-overlay text-white"><h5>Alisado y Pintura Mate</h5></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1615876234586-44491fbd37c8?auto=format&fit=crop&q=80&w=800" alt="Dormitorio">
+                        <div class="gallery-overlay text-white"><h5>Decoración de Interiores</h5></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?auto=format&fit=crop&q=80&w=800" alt="Oficina">
+                        <div class="gallery-overlay text-white"><h5>Locales Comerciales</h5></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h4 class="text-center mb-5 fw-bold text-secondary">Solo trabajamos con las mejores marcas en España</h4>
+            <div class="row g-3">
+                <div class="col-6 col-md-3"><div class="brand-slot text-center">TITANLUX</div></div>
+                <div class="col-6 col-md-3"><div class="brand-slot text-center">BRUGUER</div></div>
+                <div class="col-6 col-md-3"><div class="brand-slot text-center">VALENTINE</div></div>
+                <div class="col-6 col-md-3"><div class="brand-slot text-center">JOTUN</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-5">Dudas Frecuentes</h2>
+            <div class="accordion accordion-flush shadow-sm" id="faqPintura">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">
+                            ¿Cuánto tiempo tardan en pintar un piso de 80m²?
+                        </button>
+                    </h2>
+                    <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqPintura">
+                        <div class="accordion-body">Normalmente tardamos entre 3 y 4 días, dependiendo del estado de las paredes y si hay que quitar gotelé.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">
+                            ¿Tengo que cubrir yo los muebles?
+                        </button>
+                    </h2>
+                    <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqPintura">
+                        <div class="accordion-body">No. Nosotros nos encargamos de proteger suelos, marcos y muebles con plásticos y cinta de carrocero profesional.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-azul-claro">
+        <div class="container">
+            <h2 class="text-center mb-5">Clientes Satisfechos</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-4">
+                        <p class="fst-italic text-muted">"Increíble el cambio. Quitaron el gotelé de todo el piso y el resultado es de revista. Limpios y puntuales."</p>
+                        <h6 class="fw-bold mb-0">Laura García</h6>
+                        <small class="text-primary">Madrid</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-4">
+                        <p class="fst-italic text-muted">"Pintaron mi local comercial en un fin de semana para no perder días de apertura. Gran servicio técnico."</p>
+                        <h6 class="fw-bold mb-0">Pedro Sanz</h6>
+                        <small class="text-primary">Sevilla</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/34600000000" class="float-wp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Pintores Pro España - Calidad Garantizada</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
